@@ -476,3 +476,11 @@ Nice web UI, will let you set up and download multiple docker containers.
 ### Vessel
 
 * [Vessel](http://awvessel.github.io/)
+* 
+## GPUs
+
+* http://stackoverflow.com/questions/25185405/using-gpu-from-a-docker-container
+* https://groups.google.com/forum/#!topic/docker-user/Ex1UnUZ_pmc
+* https://docs.google.com/document/d/1f8iflnFSZxAU9FhoLQPEVlSKhVPXbtCaqTVPTTJb9yo/edit
+* http://serverfault.com/questions/579118/gpu-access-on-docker-io-container
+* http://marconijr.com/posts/docker-exposing-gpu/
