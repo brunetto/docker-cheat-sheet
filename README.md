@@ -484,3 +484,8 @@ Nice web UI, will let you set up and download multiple docker containers.
 * https://docs.google.com/document/d/1f8iflnFSZxAU9FhoLQPEVlSKhVPXbtCaqTVPTTJb9yo/edit
 * http://serverfault.com/questions/579118/gpu-access-on-docker-io-container
 * http://marconijr.com/posts/docker-exposing-gpu/
+
+## Nice
+
+* http://blog.docker.com/2013/07/docker-desktop-your-desktop-over-ssh-running-inside-of-a-docker-container/
+* 
