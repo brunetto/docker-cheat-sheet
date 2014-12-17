@@ -41,29 +41,29 @@ You should have at least a 3.8 kernel, but 3.10.x is [recommended](http://docs.d
 
 From [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started) the best installation tutorial (and Docker introduction) I have found (use PPA).
 
-1. Update the system
+1- Update the system
 ```
 sudo aptitude    update
 sudo aptitude -y upgrade
 ```
-2. Make sure aufs support is available:
+2- Make sure aufs support is available:
 ```
 sudo aptitude install linux-image-extra-`uname -r`
 ```
-3. Add docker repository key to apt-key for package verification:
+3- Add docker repository key to apt-key for package verification:
 ```
 sudo sh -c "wget -qO- https://get.docker.io/gpg | apt-key add -"
 ```
-4. Add the docker repository to aptitude sources:
+4- Add the docker repository to aptitude sources:
 ```
 sudo sh -c "echo deb http://get.docker.io/ubuntu docker main\
 > /etc/apt/sources.list.d/docker.list"
 ```
-5. Update the repository with the new addition:
+5- Update the repository with the new addition:
 ```
 sudo aptitude    update
 ```
-6. Finally, download and install docker:
+6- Finally, download and install docker:
 ```
 sudo aptitude install lxc-docker
 ```
