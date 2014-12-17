@@ -34,58 +34,48 @@ Docker helps developers build and ship higher-quality applications, faster." -- 
 
 You may also like to try the [tools section](https://github.com/wsargent/docker-cheat-sheet#tools).
 
-## Prerequisites
-
-I use [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) with the [Docker plugin](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#docker) for autocompletion of docker commands.  YMMV.
 
 ### Linux
 
 You should have at least a 3.8 kernel, but 3.10.x is [recommended](http://docs.docker.com/installation/binaries/#check-kernel-dependencies).
 
-### MacOS
+From [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started) the best installation tutorial (and Docker introduction) I have found (use PPA).
 
-Use [Homebrew](http://brew.sh/).
-
+1. Update the system
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+sudo aptitude    update
+sudo aptitude -y upgrade
 ```
+2. Make sure aufs support is available:
+```
+sudo aptitude install linux-image-extra-`uname -r`
+```
+3. Add docker repository key to apt-key for package verification:
+```
+sudo sh -c "wget -qO- https://get.docker.io/gpg | apt-key add -"
+```
+4. Add the docker repository to aptitude sources:
+```
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main\
+> /etc/apt/sources.list.d/docker.list"
+```
+5. Update the repository with the new addition:
+```
+sudo aptitude    update
+```
+6. Finally, download and install docker:
+```
+sudo aptitude install lxc-docker
+```
+If you experience problems with the docker containers (network) see in the DigitalOcean [original post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started) how to start the docker daemon (or how to configure the firewall).
 
-## Installation
-
-Docker has recognized that installation / deployment is a PITA, and [bug 8681](https://github.com/docker/docker/issues/8681) deals with this specifically.
-
-### Linux
-
-Quick and easy install script provided by Docker:
+Or, try the quick and easy install script provided by Docker:
 
 ```
 curl -sSL https://get.docker.com/ | sh
 ```
 
-### Mac OS X
 
-Download Docker for OSX from the [Github Releases](https://github.com/boot2docker/osx-installer/releases) page.
-
-The canonical way to use Docker is with the aid of the boot2docker VM.  However, using the out of the box boot2docker doesn't give me control over my Vagrant instances (especially the lack of port forwarding).  So here's how to use boot2docker from a Vagrant instance.
-
-We use the [YungSang modified boot2docker instance](https://github.com/YungSang/boot2docker-vagrant-box) from the [Vagrant Cloud](https://vagrantcloud.com/yungsang/boxes/boot2docker):
-
-```
-mkdir ~/boot2docker
-cd ~/boot2docker
-vagrant init yungsang/boot2docker
-vagrant up
-export DOCKER_HOST=tcp://localhost:2375
-docker version
-```
-
-> NOTE: the YungSang boot2docker opens up port forwarding to the network, so is not safe on public wifi.  You can make a good argument that docker without TLS is [fundamentally unsafe](https://medium.com/@kevanahlquist/never-run-docker-on-a-tcp-socket-without-tls-1e7df31cf18c).  I only do it because I have [Hands Off](http://www.oneperiodic.com/products/handsoff/) installed to limit external network access.
-
-Then start up a container:
-
-```
-docker run -i -t ubuntu /bin/bash
-```
 
 That's it, you have a running Docker container. 
 
