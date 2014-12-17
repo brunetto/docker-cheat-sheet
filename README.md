@@ -67,6 +67,8 @@ sudo aptitude    update
 ```
 sudo aptitude install lxc-docker
 ```
+
+#### Restart docker and networking problems
 If you experience problems with the docker containers (network) see in the DigitalOcean [original post](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started) how to start the docker daemon (or how to configure the firewall).
 
 Or, try the quick and easy install script provided by Docker:
@@ -74,6 +76,8 @@ Or, try the quick and easy install script provided by Docker:
 ```
 curl -sSL https://get.docker.com/ | sh
 ```
+
+#### Avoiding `sudo`
 
 If you want to run docker without sudo (from [here](http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)):
 
