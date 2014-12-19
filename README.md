@@ -5,7 +5,7 @@ NOTE: This used to be a gist that continually expanded.  It's now a github proje
 * [Why](https://github.com/wsargent/docker-cheat-sheet#why)
 * [I just want a dev environment](https://github.com/wsargent/docker-cheat-sheet#tldr-i-just-want-a-dev-environment)
 * [Prerequisites](https://github.com/wsargent/docker-cheat-sheet#prerequisites)
-* [Installation](https://github.com/wsargent/docker-cheat-sheet#installation)
+* [Installation](https://github.com/brunetto/docker-cheat-sheet#installation)
 * [Containers](https://github.com/wsargent/docker-cheat-sheet#containers)
 * [Images](https://github.com/wsargent/docker-cheat-sheet#images)
 * [Registry and Repository](https://github.com/wsargent/docker-cheat-sheet#registry--repository)
